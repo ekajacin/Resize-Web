@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Dashboard from "./Dashboard";
 import ResizeImage from "./ResizeImage";
 import ResizeAudio from "./ResizeAudio";
@@ -7,14 +7,15 @@ import ResizeAudio from "./ResizeAudio";
 function App() {
   return (
      <>
-      <Router>
-      <Dashboard></Dashboard>
-        <Switch>
+     <Dashboard></Dashboard>
+     <BrowserRouter>
+     <Dashboard></Dashboard>
+      <Routes>
         <Route path="/" element={<Dashboard/>}></Route>
         <Route path="/resizeImage" element={<ResizeImage/>}></Route>
         <Route path="/resizeAudio" element={<ResizeAudio/>}></Route>
-        </Switch>
-      </Router>
+      </Routes>
+      </BrowserRouter>
      </>
 
   );
