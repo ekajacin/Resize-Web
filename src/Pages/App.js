@@ -1,15 +1,12 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Dashboard from "./Dashboard";
 import ResizeImage from "./ResizeImage";
 import ResizeAudio from "./ResizeAudio";
 
 function App() {
   return (
      <>
-     <Dashboard></Dashboard>
      <BrowserRouter>
-     <Dashboard></Dashboard>
       <Routes>
         <Route path="/" element={<Dashboard/>}></Route>
         <Route path="/resizeImage" element={<ResizeImage/>}></Route>
